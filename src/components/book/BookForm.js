@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBookApi } from '../../redux/book/action/bookAction';
+import { addBook } from '../../redux/book/action/bookAction';
 
 const bookForm = () => {
   const [title, setTitle] = useState('');
@@ -10,7 +10,7 @@ const bookForm = () => {
 
   const submitBookToStore = () => {
     const newBook = {
-      id: Math.floor(Math.random() * 100),
+      item_id: Math.floor(Math.random() * 100),
       title,
       author,
       category,
