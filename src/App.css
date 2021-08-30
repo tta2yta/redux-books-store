@@ -53,3 +53,35 @@ body { background-color: #f5f6fa; }
   border: none;
   padding: 3px 0;
 }
+
+.add-book {
+  width: 80%;
+  margin: 20px auto;
+  border-top: 2px solid #dddee4;
+}
+
+.add-book h4 {
+  margin-bottom: 5px;
+}
+
+.add-book form {
+  padding-top: 0;
+}
+
+#categories {
+  margin: 0 10px 0 30px;
+  width: 150px;
+  padding: 2px 0;
+}
+
+input[type="text"] {
+  width: 320px;
+}
+
+input[type="button"] {
+  float: right;
+  background-color: #279fff;
+  border: 0;
+  margin-bottom: 0;
+  padding: 5px 5px;
+}
