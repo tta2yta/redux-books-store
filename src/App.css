@@ -1,3 +1,16 @@
+body { background-color: #f5f6fa; }
+
+.bookList {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  background-color: white;
+}
+
+.list-item {
+  border: 1px solid #f5f6fa;
+  padding-left: 20px;
+}
 .book-title {
   font-weight: bold;
   font-size: 20px;
@@ -12,4 +25,29 @@
 .book-author {
   padding: 3px;
   color: #4395d6;
+}
+.crudbtn {
+  padding: 10px 0;
+}
+
+.crudbtn button {
+  margin-right: 40px;
+
+  /* padding: 3px; */
+  color: #4395d6;
+  background-color: white;
+}
+
+.rmvbtn {
+  border-left: 1px solid #32a1ce;
+  border-right: 1px solid #32a1ce;
+  border-top: none;
+  border-bottom: none;
+  padding: 3px 25px;
+}
+
+.addbtn,
+.editbtn {
+  border: none;
+  padding: 3px 0;
 }
