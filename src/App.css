@@ -11,6 +11,7 @@ body { background-color: #f5f6fa; }
   border: 1px solid #f5f6fa;
   padding-left: 20px;
 }
+
 .book-title {
   font-weight: bold;
   font-size: 20px;
@@ -26,6 +27,7 @@ body { background-color: #f5f6fa; }
   padding: 3px;
   color: #4395d6;
 }
+
 .crudbtn {
   padding: 10px 0;
 }
