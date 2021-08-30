@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Redux Book Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![View Code](https://img.shields.io/badge/View%20-Code-green)](https://github.com/tta2yta/redux-books-store/pulls)
+[![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/tta2yta/redux-books-store/issues)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Content
 
-### `npm start`
+<a text-align="center" href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#description">Description</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#live">Live Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#screenshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#setup">Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#prerequisites">Prerequisites</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#author">Author</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About <a name = "about"></a>
 
-### `npm test`
+A basic book store app developed using React and Redux.. It is a Single Page App (SPA) that allows users to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Add, Remove books
+Provide comments.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔴 Live Demo <a name = "live"></a>
+**Click [here](https://redux-books-store.herokuapp.com/) in order to see a Live Demo of this project.**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔧 Built with<a name = "with"></a>
 
-### `npm run eject`
+- ES6
+- HTML
+- CSS
+- React
+- Node
+- Redux
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🔨 Setup<a name = "setup"></a>
+### Run a Local Copy
+- Download the repository to a local directory on your computer.
+- Or run the following commands on the terminal
+  $ git clone https://github.com/tta2yta/redux-books-store.git
+  $ cd redux-bookstore
+  $ npm install
+  $ npm install --only=dev
+  $ npm start (This is the development mode)
+  $ npm run build (This is the production mode)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run Test
+npm run test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+npm run jest
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+If you are non a technical person you can download the zip file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- To do that you have to go to the green button that says 'Code' and then press on it.
+- Choose the option 'Download Zip' and wait until it download.
+- Then you need to decompress it.
+- You will need to have Zip compress file software installed in your computer. If you don't have it you can download it from here
+  [`https://www.7-zip.org/download.html`](https://www.7-zip.org/download.html)
+- Do double click on the math-magicians.zip and choose a folder where to place all teh decompressed files.
+- Once you are done decompressing, you can open the created folder.
+- In it you can double click on the index.html file and choose a browser to open it (For example google Chrome Browser).
+- Now you should be able to see the project.
+- Remember to use the mouse to navigate through the website. Also you can use the keys 'arrow up' and 'arrow down' of your keyboard
+  to scroll up and down.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Prerequisites<a name = "prerequisites"></a>
+- npm
+- A modern up-to-date browser
+- Text Editor
 
-### Code Splitting
+## ✒️  Author <a name = "author"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 **Tedros Tesfay**
 
-### Analyzing the Bundle Size
+- Github: [@tta2yta](https://github.com/tta2yta)
+- Twitter: [@Tedros12859799](https://twitter.com/Tedros12859799)
+- Linkedin: [@tedros-tesfay-489422111](https://www.linkedin.com/in/tedros-tesfay-489422111/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions, issues and feature requests are welcome!
 
-### Advanced Configuration
+Feel free to check the [issues page](https://github.com/tta2yta/redux-books-store/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## 👍 Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Give a ⭐️ if you like this project!
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## :clap: Acknowledgements
+- <a href="https://www.microverse.org/" target="_blank">microverse.org</a>
+- <a href="https://www.theodinproject.com/" target="_blank">The Odin Project</a>
+- <a href="https://netlify.com/" target="_blank">netlify</a>
+</a>
+</div>
