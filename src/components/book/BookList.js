@@ -1,8 +1,15 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBooksApi } from '../../redux/book/action/bookAction';
 import AddRemove from './addRemove';
 
 const bookList = () => {
   const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooksApi());
+  }, []);
 
   return (
     <>
