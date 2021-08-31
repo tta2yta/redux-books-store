@@ -1,8 +1,21 @@
-import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBooks } from '../../redux/book/action/bookAction';
 import AddRemove from './addRemove';
 
 const bookList = () => {
-  const books = useSelector((state) => state.books);
+  const [books, setBooks] = useState([]);
+  const bookLists = useSelector((state) => state.books);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
+
+  useEffect(() => {
+    if (books !== bookLists) setBooks(bookLists);
+  });
 
   return (
     <>
