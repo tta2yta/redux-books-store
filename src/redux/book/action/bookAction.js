@@ -60,7 +60,7 @@ export const addBookApi = (book) => async (dispatch) => {
     body: JSON.stringify({
       item_id: book.id, title: book.title, category: book.category,
     }),
-  }).then(dispatch(fetchBooks()));
+  }).then(dispatch(getBooksApi()));
 };
 
 export const deleteBookApi = (id) => async (dispatch) => {
