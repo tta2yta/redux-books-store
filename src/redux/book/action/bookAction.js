@@ -46,3 +46,14 @@ export const getBooksApi = () => async (dispatch) => {
     console.log('Unable to fetch data');
   }
 };
+
+export const deleteBookApi = (id) => async (dispatch) => {
+  await axios
+    .delete(`${apiUrl}/${id}`, {
+      headers: {
+        'Access-Control-Allow-Origin': true,
+      },
+    })
+    .then(dispatch(getBooksApi()))
+    .catch(() => 'error');
+};
