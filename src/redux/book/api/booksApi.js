@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cF90aS533hJGfCJadIOC/books';
 
 export const getBooksApi = async () => {
@@ -38,4 +40,15 @@ export const createBookApi = async (book) => {
     }),
   });
   return response.status === 201;
+};
+
+export const deleteBookApi = async (id) => {
+  const res = await axios
+    .delete(`${apiUrl}/${id}`, {
+      headers: {
+        'Access-Control-Allow-Origin': true,
+      },
+    })
+    .then((res) => res.data);
+  return res === 'The book was deleted successfully!';
 };
