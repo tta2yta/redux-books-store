@@ -21,7 +21,6 @@ const fetchBooks = (payLoad) => ({
 
 export const getBooks = () => async (dispatch) => {
   const books = await BOOK_APIS.getBooksApi();
-  console.log(books);
   if (books) {
     dispatch(fetchBooks(books));
   }

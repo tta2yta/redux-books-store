@@ -28,7 +28,6 @@ export const getBooksApi = async () => {
 };
 
 export const createBookApi = async (book) => {
-  console.log(book);
   const response = await fetch(apiUrl, {
     method: 'POST',
     headers: {
