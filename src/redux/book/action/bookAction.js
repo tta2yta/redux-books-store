@@ -18,7 +18,7 @@ export const removeBook = (payLoad) => ({
 
 export const getBooksApi = () => async (dispatch) => {
   const books = [];
-  const response = fetch(apiUrl,
+  const response = await fetch(apiUrl,
     {
       method: 'GET',
       headers: { 'content-type': 'application/json' },
