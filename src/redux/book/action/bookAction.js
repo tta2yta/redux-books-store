@@ -47,6 +47,22 @@ export const getBooksApi = () => async (dispatch) => {
   }
 };
 
+export const addBookApi = (book) => async (dispatch) => {
+  console.log(book);
+  // const response = await axios.post(apiUrl, JSON.Stringify(book)).then((result) => result.data);
+  // console.log(response);
+  await fetch(apiUrl, {
+    method: 'POST',
+    mode: 'cors',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: book.id, title: book.title, category: book.category,
+    }),
+  }).then(dispatch(fetchBooks()));
+};
+
 export const deleteBookApi = (id) => async (dispatch) => {
   await axios
     .delete(`${apiUrl}/${id}`, {
