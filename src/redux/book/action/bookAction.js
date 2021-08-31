@@ -1,5 +1,5 @@
 import axios from 'axios';
-import  * as BOOK_APIS  from '../api/booksApi';
+import * as BOOK_APIS from '../api/booksApi';
 
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
@@ -22,15 +22,15 @@ const fetchBooks = (payload) => ({
   payload,
 });
 
-export const getBook = () => async (dispatch) => {
-const books= await BOOK_APIS.getBooksApi();
-if(books){
-  dispatch()
-}
+export const getBooks = () => async (dispatch) => {
+  const books = await BOOK_APIS.getBooksApi();
+  if (books) {
+    dispatch(fetchBooks(books));
+  }
 };
 
-export const addBook = () => async (dispatch) => {
-  const result = createBookApi.then((res) => dispatch);
+export const createBook = () => async () => {
+
 };
 
 export const deleteBook = (id) => async (dispatch) => {
@@ -40,6 +40,6 @@ export const deleteBook = (id) => async (dispatch) => {
         'Access-Control-Allow-Origin': true,
       },
     })
-    .then(dispatch(getBooksApi()))
+    .then(dispatch(getBooks()))
     .catch(() => 'error');
 };
