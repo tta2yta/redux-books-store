@@ -1,26 +1,8 @@
+import { useSelector } from 'react-redux';
 import AddRemove from './addRemove';
 
 const bookList = () => {
-  const books = [
-    {
-      item_id: 1,
-      title: 'Book-1',
-      author: 'AAA',
-      categories: 'category -1',
-    },
-    {
-      item_id: 2,
-      title: 'Book-2',
-      author: 'BBB',
-      categories: 'category -2',
-    },
-    {
-      item_id: 3,
-      title: 'Book-3',
-      author: 'CCC',
-      categories: 'category -3',
-    },
-  ];
+  const books = useSelector((state) => state.books);
 
   return (
     <>

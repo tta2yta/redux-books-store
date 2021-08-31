@@ -1,11 +1,23 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../../redux/book/action/bookAction';
 
 const bookForm = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('fiction');
+  const dispatch = useDispatch();
+
   const submitBookToStore = () => {
+    const newBook = {
+      item_id: Math.floor(Math.random() * 100),
+      title,
+      author,
+      category,
+    };
+    dispatch(addBook(newBook));
   };
+
   const handleOnChangeTitle = (e) => {
     setTitle(e.target.value);
   };
