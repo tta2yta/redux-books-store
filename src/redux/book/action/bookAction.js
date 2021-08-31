@@ -1,11 +1,8 @@
-import axios from 'axios';
 import * as BOOK_APIS from '../api/booksApi';
 
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const FETCH_BOOKS_API = 'FETCH_BOOKS_API';
-
-const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cF90aS533hJGfCJadIOC/books';
 
 export const addBooks = (payLoad) => ({
   type: ADD_BOOK,
@@ -38,12 +35,8 @@ export const createBook = (book) => async (dispatch) => {
 };
 
 export const deleteBook = (id) => async (dispatch) => {
-  await axios
-    .delete(`${apiUrl}/${id}`, {
-      headers: {
-        'Access-Control-Allow-Origin': true,
-      },
-    })
-    .then(dispatch(getBooks()))
-    .catch(() => 'error');
+  const res = await BOOK_APIS.deleteBookApi(id);
+  if (res) {
+    dispatch(removeBook(id));
+  }
 };
