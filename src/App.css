@@ -35,8 +35,6 @@ body { background-color: #f5f6fa; }
 
 .crudbtn button {
   margin-right: 40px;
-
-  /* padding: 3px; */
   color: #4395d6;
   background-color: white;
 }
@@ -95,10 +93,13 @@ input[type="button"] {
 .nav-items {
   padding-right: 40px;
   text-decoration: none;
+  color: #9E9E9E;
 }
 
 .navBar ul > a:first-child {
-  font-size: 25px;
+  font-size: 28px;
+  color: #0290FF;
+  font-weight: 700;
 }
 
 .navBar ul {
