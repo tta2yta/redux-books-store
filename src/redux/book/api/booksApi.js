@@ -25,7 +25,7 @@ export const getBooksApi = async () => {
   return books;
 };
 
-export const createBook = async (book) => {
+export const createBookApi = async (book) => {
   console.log(book);
   const response = await fetch(apiUrl, {
     method: 'POST',

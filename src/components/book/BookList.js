@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getBooksApi } from '../../redux/book/action/bookAction';
+import { getBooks } from '../../redux/book/action/bookAction';
 import AddRemove from './addRemove';
 
 const bookList = () => {
@@ -12,7 +12,7 @@ const bookList = () => {
   console.log(books);
 
   useEffect(() => {
-    dispatch(getBooksApi());
+    dispatch(getBooks());
   }, []);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createBook } from '../api/booksApi';
+import  * as BOOK_APIS  from '../api/booksApi';
 
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
@@ -17,42 +17,23 @@ export const removeBook = (payLoad) => ({
   payLoad,
 });
 
-export const getBooksApi = () => async (dispatch) => {
-  const books = [];
-  const response = await fetch(apiUrl,
-    {
-      method: 'GET',
-      headers: { 'content-type': 'application/json' },
-      mode: 'cors',
-    }).then((res) => res.json())
-    .then((err) => err);
-  if (response) {
-    // eslint-disable-next-line no-restricted-syntax
-    for (const [key, value] of Object.entries(response)) {
-      const id = key;
-      const obj = value;
-      const book = {
-        item_id: id,
-        title: obj[0].title,
-        category: obj[0].category,
-      };
-      books.push(book);
-    }
+const fetchBooks = (payload) => ({
+  type: FETCH_BOOKS_API,
+  payload,
+});
 
-    dispatch({
-      type: FETCH_BOOKS_API,
-      payLoad: books,
-    });
-  } else {
-    console.log('Unable to fetch data');
-  }
+export const getBook = () => async (dispatch) => {
+const books= await BOOK_APIS.getBooksApi();
+if(books){
+  dispatch()
+}
 };
 
-export const addBookApi = () => async (dispatch) => {
-  const result = createBook.then((res) => dispatch);
+export const addBook = () => async (dispatch) => {
+  const result = createBookApi.then((res) => dispatch);
 };
 
-export const deleteBookApi = (id) => async (dispatch) => {
+export const deleteBook = (id) => async (dispatch) => {
   await axios
     .delete(`${apiUrl}/${id}`, {
       headers: {

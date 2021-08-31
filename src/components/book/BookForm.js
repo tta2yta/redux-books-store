@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBookApi } from '../../redux/book/action/bookAction';
+import { addBook } from '../../redux/book/action/bookAction';
 
 const bookForm = () => {
   const [title, setTitle] = useState('');
@@ -15,7 +15,7 @@ const bookForm = () => {
       author,
       category,
     };
-    dispatch(addBookApi(newBook));
+    dispatch(addBook(newBook));
   };
 
   const handleOnChangeTitle = (e) => {
