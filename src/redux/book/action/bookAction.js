@@ -7,7 +7,7 @@ const FETCH_BOOKS_API = 'FETCH_BOOKS_API';
 
 const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/cF90aS533hJGfCJadIOC/books';
 
-export const addBook = (payLoad) => ({
+export const addBooks = (payLoad) => ({
   type: ADD_BOOK,
   payLoad,
 });
@@ -17,20 +17,24 @@ export const removeBook = (payLoad) => ({
   payLoad,
 });
 
-const fetchBooks = (payload) => ({
+const fetchBooks = (payLoad) => ({
   type: FETCH_BOOKS_API,
-  payload,
+  payLoad,
 });
 
 export const getBooks = () => async (dispatch) => {
   const books = await BOOK_APIS.getBooksApi();
+  console.log(books);
   if (books) {
     dispatch(fetchBooks(books));
   }
 };
 
-export const createBook = () => async () => {
-
+export const createBook = (book) => async (dispatch) => {
+  const result = await BOOK_APIS.createBookApi(book);
+  if (result) {
+    dispatch(addBooks(book));
+  }
 };
 
 export const deleteBook = (id) => async (dispatch) => {
