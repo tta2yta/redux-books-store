@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { addBook } from '../api/booksApi';
+import { createBook } from '../api/booksApi';
 
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
@@ -48,8 +48,8 @@ export const getBooksApi = () => async (dispatch) => {
   }
 };
 
-export const addBookApi= (dispatch) => {
-
+export const addBookApi = () => async (dispatch) => {
+  const result = createBook.then((res) => dispatch);
 };
 
 export const deleteBookApi = (id) => async (dispatch) => {
