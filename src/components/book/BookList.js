@@ -17,6 +17,7 @@ const bookList = () => {
   // useEffect(() => {
   //   if (books !== bookLists) setBooks(bookLists);
   // });
+  console.log(bookLists);
 
   return (
     <>
@@ -30,10 +31,10 @@ const bookList = () => {
               <AddRemove item_id={item.item_id} />
             </div>
 
-            <div className="perc-completed">
-              <Progress value={90} />
+            <div className="perc-completed" key={Math.floor(Math.random * 100)}>
+              <Progress value={item.progress} />
             </div>
-            <div className="chapter">chapter</div>
+            <div className="chapter" key={Math.floor(Math.random * 100)}>chapter</div>
           </>
 
         ))}
