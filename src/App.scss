@@ -16,7 +16,7 @@ body { background-color: #f5f6fa; }
 
 .list-item {
   border: 1px solid #f5f6fa;
-  padding-left: 20px;
+  padding: 20px;
 }
 
 .book-title {
@@ -115,6 +115,9 @@ input[type="button"] {
 
 .progress {
   align-items: center;
+  position: relative;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .progress > div:nth-child(1) {
@@ -123,8 +126,9 @@ input[type="button"] {
   border: 4px solid #eee;
   width: 4.25rem;
   height: 4.25rem;
+  
+ 
 }
-
 .progress > div:nth-child(1) > svg {
   color: var(--dodger-blue);
   position: absolute;
@@ -144,16 +148,21 @@ input[type="button"] {
 }
 
 .percentage {
+  position: absolute;
+  top: 40%;
+  left: 1%;
+  justify-content: center;
   height: 2.438rem;
-  margin-left: 1rem;
-  font-size: 2rem;
+  margin-left: 9rem;
+  font-size: 1.6rem;
   color: var(--black-two);
 }
 
 .completed {
   height: 1.125rem;
-  margin-left: 1rem;
+  margin-left: 8rem;
   color: var(--black-2);
   opacity: 0.5;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  padding: 10px 0;
 }
