@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { Avatar } from '@material-ui/core';
 
 const navBar = () => {
   const links = [
@@ -32,7 +33,9 @@ const navBar = () => {
             {item.text}
           </NavLink>
         ))}
+        <Avatar className="avatar" />
       </ul>
+
     </div>
   );
 };

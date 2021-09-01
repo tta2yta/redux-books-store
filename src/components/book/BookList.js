@@ -13,6 +13,7 @@ const bookList = () => {
 
   useEffect(() => {
     dispatch(getBooks());
+    console.log(bookLists);
   }, []);
 
   // useEffect(() => {
@@ -35,7 +36,7 @@ const bookList = () => {
             <div className="perc-completed" key={Math.floor(Math.random * 100)}>
               <Progress value={item.progress} />
             </div>
-            <div className="chapter" key={Math.floor(Math.random * 100)}><UpdateProgress /></div>
+            <div className="chapter" key={Math.floor(Math.random * 0.1)}><UpdateProgress /></div>
 
           </>
 

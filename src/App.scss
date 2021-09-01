@@ -101,6 +101,17 @@ input[type="button"] {
   text-decoration: none;
   color: #9e9e9e;
 }
+.avatar{
+   background: none !important;
+  border: 1px solid #eee;
+  margin-right: 70px;
+  float:  right;
+}
+.avatar > svg {
+  color: var(--dodger-blue);
+  background-color: #279fff;
+  border-radius: 50%;
+}
 
 .navBar ul > a:first-child {
   font-size: 28px;
