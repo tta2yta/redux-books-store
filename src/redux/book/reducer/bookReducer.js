@@ -1,6 +1,8 @@
 const initialState = [];
 
 const bookReducer = (state = initialState, action) => {
+  const authors = ['William Shakespeare', 'Agatha Christie', 'Barbara Cartland', 'Stephen King', 'Penny Jordan'];
+  const currentChapter = ['Introduction', 'Chapter 1', 'Chapter 2', 'Chapter 3', 'Chapter 4', 'Chapter 5'];
   switch (action.type) {
     case 'ADD_BOOK':
       return [...state,
@@ -13,9 +15,9 @@ const bookReducer = (state = initialState, action) => {
         return {
           item_id: key,
           ...value,
-          // author: authors[Math.floor(Math.random() * authors.length)],
+          author: authors[Math.floor(Math.random() * authors.length)],
           progress: Math.floor(Math.random() * 100),
-          // currentChapter: currentChapter[Math.floor(Math.random() * currentChapter.length)],
+          currentChapter: currentChapter[Math.floor(Math.random() * currentChapter.length)],
         };
       });
 
