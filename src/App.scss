@@ -1,6 +1,3 @@
-// Compass utilities
-@import "compass";
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900');
 body { background-color: #f5f6fa; }
 
 .bookList,
@@ -116,135 +113,47 @@ input[type="button"] {
 }
 
 
-// VARS
-$circle-width: 0.09em;
-$circle-width-hover: 0.07em;
-
-// colors default
-$primary-color: #000000; // czarny
-$secondary-color: #dfe8ed; //szary bcg
-$bg-color: #ffffff; //srodkowy bezowy 
-
-// colors customized
-$primary-color-blue: #30bae7;
-$primary-color-green: #15c7a8;
-$primary-color-orange: #eb7d4b; 
-$primary-color-pink: #d74680; 
-$primary-color-span: #3c4761;
-
-// CIRCLE
-// classes 2 extend
-.rect-auto{
-	clip: rect(auto, auto, auto, auto);
+.progress {
+  align-items: center;
 }
 
-.pie {
-	position: absolute;
-	border: $circle-width solid $primary-color;
-	width: 1 - (2 * $circle-width);
-	height: 1 - (2 * $circle-width);
-	clip: rect(0em, 0.5em, 1em, 0em);
-	border-radius: 50%;
-	@include rotate(0deg);
-}
-
-.pie-fill {
-	@include rotate(180deg);
-}
-.wrapper {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-
-// main
-.c100 {
-
-	*, *:before, *:after {
-		@include box-sizing(content-box);
-	}
-
-	position: relative;
-	font-size: 160px;
-	width: 1em;
-	height: 1em;
-	border-radius: 50%;
-	float: left;
-	margin: 0.4em;
-	background-color: $secondary-color;
-// centered value inside circle
-> span {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 5em;
-  line-height: 5em;
-  font-size: 0.2em;
-  color: $primary-color-span;
-  display: block;
-  text-align: center;
-  white-space: nowrap;
-  @include transition-property(all);
-  @include transition-duration(0.2s);
-  @include transition-timing-function(ease-out);
-}
-
-// background inside the circle
-&:after{
-  position: absolute;
-  top: $circle-width;
-  left: $circle-width;
-  display: block;
-  content: " ";
+.progress > div:nth-child(1) {
+  position: relative;
   border-radius: 50%;
-  background-color: $bg-color;
-  width: 1 - (2 * $circle-width);
-  height: 1 - (2 * $circle-width);
-  @include transition-property(all);
-  @include transition-duration(0.2s);
-  @include transition-timing-function(ease-in);
-
+  border: 4px solid #eee;
+  width: 4.25rem;
+  height: 4.25rem;
 }
 
-// the slice (mask)
-.slice {
+.progress > div:nth-child(1) > svg {
+  color: var(--dodger-blue);
   position: absolute;
-  width: 1em;
-  height: 1em;
-  clip: rect(0em, 1em, 1em, 0.5em);
+  top: -0.25rem;
+  left: -0.25rem;
+  bottom: -0.25rem;
+  right: -0.25rem;
 }
 
-// circle to show the status
-.bar {
-  @extend .pie;
+.progress > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 50px;
+  border-right: 1px solid #eee;
 }
 
+.percentage {
+  height: 2.438rem;
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: var(--black-two);
+}
 
-	// loop to create all needed elements automatically
-	@for $j from 51 through 100 {
-
-		&.p#{$j} .slice {
-			@extend .rect-auto;
-		}
-
-		&.p#{$j} .bar:after{
-			@extend .pie-fill;
-		}
-
-		&.p#{$j} .fill{
-			@extend .pie;
-			@extend .pie-fill;
-		}
-
-	}
-
-	// loop to rotate all 100 circles
-	@for $j from 1 through 100 {
-		&.p#{$j} .bar {
-			@include rotate((360/100*$j) + deg);
-		}
-	}
-
+.completed {
+  height: 1.125rem;
+  margin-left: 1rem;
+  color: var(--black-2);
+  opacity: 0.5;
+  font-size: 0.875rem;
 }
