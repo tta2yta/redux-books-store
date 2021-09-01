@@ -31,7 +31,7 @@ const bookList = () => {
             </div>
 
             <div className="perc-completed">
-              <Progress value="90" />
+              <Progress value={90} />
             </div>
             <div className="chapter">chapter</div>
           </>
