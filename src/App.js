@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import BookForm from './components/book/BookForm';
 import BookList from './components/book/BookList';
 import NavBar from './components/NavBar';

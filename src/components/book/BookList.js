@@ -30,8 +30,8 @@ const bookList = () => {
 
         ))}
         <div className="perc-completed">
-          <div className="c100 p34 center">
-            <span>34%</span>
+          <div className="c100 p90 blue">
+            <span>90%</span>
             <div className="slice">
               <div className="bar" />
               <div className="fill" />

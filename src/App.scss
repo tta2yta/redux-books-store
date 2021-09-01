@@ -1,0 +1,250 @@
+// Compass utilities
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900');
+body { background-color: #f5f6fa; }
+
+.bookList,
+.navBar {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.bookList {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.list-item {
+  border: 1px solid #f5f6fa;
+  padding-left: 20px;
+}
+
+.book-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.book-category {
+  font-weight: 700;
+  color: #d5d5d5;
+  padding: 3px;
+}
+
+.book-author {
+  padding: 3px;
+  color: #4395d6;
+}
+
+.crudbtn {
+  padding: 10px 0;
+}
+
+.crudbtn button {
+  margin-right: 40px;
+  color: #4395d6;
+  background-color: white;
+}
+
+.rmvbtn {
+  border-left: 1px solid #32a1ce;
+  border-right: 1px solid #32a1ce;
+  border-top: none;
+  border-bottom: none;
+  padding: 3px 25px;
+}
+
+.addbtn,
+.editbtn {
+  border: none;
+  padding: 3px 0;
+}
+
+.add-book {
+  width: 80%;
+  margin: 20px auto;
+  border-top: 2px solid #dddee4;
+}
+
+.add-book h4 {
+  margin-bottom: 5px;
+}
+
+.add-book form {
+  padding-top: 0;
+}
+
+#categories {
+  margin: 0 10px 0 30px;
+  width: 150px;
+  padding: 2px 0;
+}
+
+input[type="text"] {
+  width: 320px;
+}
+
+input[type="button"] {
+  float: right;
+  background-color: #279fff;
+  border: 0;
+  margin-bottom: 0;
+  padding: 5px 5px;
+}
+
+.navBar {
+  padding: 5px 0 5px;
+  margin-bottom: 0;
+}
+
+.nav-items {
+  padding-right: 40px;
+  text-decoration: none;
+  color: #9e9e9e;
+}
+
+.navBar ul > a:first-child {
+  font-size: 28px;
+  color: #0290ff;
+  font-weight: 700;
+}
+
+.navBar ul {
+  padding-left: 20px;
+}
+
+
+// VARS
+$circle-width: 0.09em;
+$circle-width-hover: 0.07em;
+
+// colors default
+$primary-color: #000000; // czarny
+$secondary-color: #dfe8ed; //szary bcg
+$bg-color: #ffffff; //srodkowy bezowy 
+
+// colors customized
+$primary-color-blue: #30bae7;
+$primary-color-green: #15c7a8;
+$primary-color-orange: #eb7d4b; 
+$primary-color-pink: #d74680; 
+$primary-color-span: #3c4761;
+
+// CIRCLE
+// classes 2 extend
+.rect-auto{
+	clip: rect(auto, auto, auto, auto);
+}
+
+.pie {
+	position: absolute;
+	border: $circle-width solid $primary-color;
+	width: 1 - (2 * $circle-width);
+	height: 1 - (2 * $circle-width);
+	clip: rect(0em, 0.5em, 1em, 0em);
+	border-radius: 50%;
+	@include rotate(0deg);
+}
+
+.pie-fill {
+	@include rotate(180deg);
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+// main
+.c100 {
+
+	*, *:before, *:after {
+		@include box-sizing(content-box);
+	}
+
+	position: relative;
+	font-size: 160px;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	float: left;
+	margin: 0.4em;
+	background-color: $secondary-color;
+// centered value inside circle
+> span {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 5em;
+  line-height: 5em;
+  font-size: 0.2em;
+  color: $primary-color-span;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  @include transition-property(all);
+  @include transition-duration(0.2s);
+  @include transition-timing-function(ease-out);
+}
+
+// background inside the circle
+&:after{
+  position: absolute;
+  top: $circle-width;
+  left: $circle-width;
+  display: block;
+  content: " ";
+  border-radius: 50%;
+  background-color: $bg-color;
+  width: 1 - (2 * $circle-width);
+  height: 1 - (2 * $circle-width);
+  @include transition-property(all);
+  @include transition-duration(0.2s);
+  @include transition-timing-function(ease-in);
+
+}
+
+// the slice (mask)
+.slice {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  clip: rect(0em, 1em, 1em, 0.5em);
+}
+
+// circle to show the status
+.bar {
+  @extend .pie;
+}
+
+
+	// loop to create all needed elements automatically
+	@for $j from 51 through 100 {
+
+		&.p#{$j} .slice {
+			@extend .rect-auto;
+		}
+
+		&.p#{$j} .bar:after{
+			@extend .pie-fill;
+		}
+
+		&.p#{$j} .fill{
+			@extend .pie;
+			@extend .pie-fill;
+		}
+
+	}
+
+	// loop to rotate all 100 circles
+	@for $j from 1 through 100 {
+		&.p#{$j} .bar {
+			@include rotate((360/100*$j) + deg);
+		}
+	}
+
+}
