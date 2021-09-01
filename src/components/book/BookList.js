@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getBooks } from '../../redux/book/action/bookAction';
 import AddRemove from './addRemove';
 import Progress from './Progress';
+import UpdateProgress from './UpdateProgress';
 
 const bookList = () => {
   // const [books, setBooks] = useState([]);
@@ -34,7 +35,8 @@ const bookList = () => {
             <div className="perc-completed" key={Math.floor(Math.random * 100)}>
               <Progress value={item.progress} />
             </div>
-            <div className="chapter" key={Math.floor(Math.random * 100)}>chapter</div>
+            <div className="chapter" key={Math.floor(Math.random * 100)}><UpdateProgress /></div>
+
           </>
 
         ))}
