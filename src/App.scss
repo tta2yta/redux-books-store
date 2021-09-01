@@ -101,12 +101,14 @@ input[type="button"] {
   text-decoration: none;
   color: #9e9e9e;
 }
-.avatar{
-   background: none !important;
+
+.avatar {
+  background: none !important;
   border: 1px solid #eee;
   margin-right: 70px;
-  float:  right;
+  float: right;
 }
+
 .avatar > svg {
   color: var(--dodger-blue);
   background-color: #279fff;
@@ -123,13 +125,12 @@ input[type="button"] {
   padding-left: 20px;
 }
 
-
 .progress {
   padding: 20px;
   display: flex;
   border-top: 1px solid #f5f6fa;
-  
 }
+
 .progress-text {
   display: flex;
   flex-direction: row;
@@ -142,6 +143,7 @@ input[type="button"] {
   height: 4.25rem;
   margin-top: 20px;
 }
+
 .progress > div:nth-child(1) > svg {
   color: var(--dodger-blue);
   position: absolute;
@@ -174,24 +176,28 @@ input[type="button"] {
   opacity: 0.5;
   font-size: 1rem;
 }
-.upd-progress{
+
+.upd-progress {
   display: flex;
   flex-direction: column;
   border-top: 1px solid #f5f6fa;
 }
-.curr-progress{
+
+.curr-progress {
   color: #d5d5d5;
   text-align: left;
   padding: 3px;
   margin-top: 30px;
 }
-.chapter{
+
+.chapter {
   color: #868686;
   text-align: left;
   padding: 3px 3px 6px;
 }
-.upd-prog{
-  background-color: #0290FF;
+
+.upd-prog {
+  background-color: #0290ff;
   color: white;
   padding: 8px 10px;
   text-align: left;
