@@ -29,7 +29,16 @@ const bookList = () => {
           </div>
 
         ))}
-
+        <div className="perc-completed">
+          <div className="c100 p34 center">
+            <span>34%</span>
+            <div className="slice">
+              <div className="bar" />
+              <div className="fill" />
+            </div>
+          </div>
+        </div>
+        <div className="chapter">chapter</div>
       </div>
     </>
   );
