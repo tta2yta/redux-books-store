@@ -47,23 +47,17 @@ body { background-color: #f5f6fa; }
 }
 
 .crudbtn button {
-  margin-right: 40px;
   color: #4395d6;
   background-color: white;
-}
-
-.rmvbtn {
-  border-left: 1px solid #32a1ce;
-  border-right: 1px solid #32a1ce;
-  border-top: none;
-  border-bottom: none;
-  padding: 3px 25px;
-}
-
-.addbtn,
-.editbtn {
   border: none;
-  padding: 3px 0;
+  border-right: 1px solid #32a1ce;
+  text-align: left;
+  padding-right: 10px;
+}
+
+.editbtn,
+.rmvbtn {
+  padding-left: 10px;
 }
 
 .add-book {
