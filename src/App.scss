@@ -3,7 +3,7 @@ body { background-color: #f5f6fa; }
 .bookList,
 .navBar {
   width: 80%;
-  margin: auto;
+  margin: 0 10%;
   margin-top: 10px;
   background-color: white;
 }
@@ -37,6 +37,8 @@ body { background-color: #f5f6fa; }
 
 .crudbtn {
   padding: 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .crudbtn button {
@@ -92,12 +94,13 @@ input[type="button"] {
 }
 
 .navBar {
-  padding: 5px 0 5px;
+  padding: 20px 0 20px 0;
   margin-bottom: 0;
+  border: 1px solid red;
 }
 
 .nav-items {
-  padding-right: 40px;
+  padding: 0;
   text-decoration: none;
   color: #9e9e9e;
 }
@@ -115,14 +118,21 @@ input[type="button"] {
   border-radius: 50%;
 }
 
-.navBar ul > a:first-child {
-  font-size: 28px;
-  color: #0290ff;
-  font-weight: 700;
+.navBar ul a {
+  padding-left: 30px;
+  font-size: 13px;
 }
 
 .navBar ul {
-  padding-left: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.navBar ul > a:first-child {
+  font-size: 30px;
+  color: #0290ff;
+  font-weight: 700;
+  padding-left: 0;
 }
 
 .progress {
