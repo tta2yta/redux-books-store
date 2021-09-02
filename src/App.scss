@@ -94,9 +94,8 @@ input[type="button"] {
 }
 
 .navBar {
-  padding: 20px 0 20px 0;
+  padding: 23px 0 23px 0;
   margin-bottom: 0;
-  border: 1px solid red;
 }
 
 .nav-items {
@@ -119,8 +118,9 @@ input[type="button"] {
 }
 
 .navBar ul a {
-  padding-left: 30px;
+  padding-left: 35px ;
   font-size: 13px;
+  padding-bottom: 30px;
 }
 
 .navBar ul {
@@ -132,7 +132,8 @@ input[type="button"] {
   font-size: 30px;
   color: #0290ff;
   font-weight: 700;
-  padding-left: 0;
+  padding-left: 20px;
+  padding-bottom: 0;
 }
 
 .progress {
